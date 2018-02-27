@@ -5,9 +5,13 @@ public class App {
         Random rand = new Random();
         TreeSet<Integer> numbers = new TreeSet<>();
         int num;
-        for (int i = 0; i < 50; i++) {
+        int i = 0;
+        while(i <10) {
             num = rand.nextInt(1000);
-            numbers.add(num);
+            if(!(numbers.contains(num))) {
+                numbers.add(num);
+                i++;
+            }
         }
         System.out.println(numbers);
         System.out.println("Najmniejsza liczba ze zbioru to: " + numbers.first());
